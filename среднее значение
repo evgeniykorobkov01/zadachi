@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    int summ = 0;
+    vector < int >arr = { 2,5,3,10,5,7 };//тут любые числа
+    for (int i = 0; i < arr.size(); i++)
+    {
+        summ += arr[i];
+    }
+    int a = summ / arr.size();
+    cout << a << endl;
+}
