@@ -1,0 +1,13 @@
+# https://leetcode.com/problems/remove-element/
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k= len(nums)
+        i=0
+        while i<k:
+            if nums[i]==val:
+                del nums[i]
+                k= len(nums)
+                i=i-1
+            i=i+1
+        print (nums)
+        print (k)
