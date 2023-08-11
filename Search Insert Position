@@ -1,0 +1,23 @@
+# https://leetcode.com/problems/search-insert-position/
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        k= len(nums)
+        i=0
+        a = True
+        while i<k:
+            if nums[i]==target:
+                k=i
+                a = False
+                break
+            i=i+1
+        if a==True:
+            nums.append(target)
+            nums.sort()
+            k=len(nums)
+            i=0
+            while i<k:
+                if nums[i]==target:
+                    k=i
+                    break
+                i=i+1
+        return k
