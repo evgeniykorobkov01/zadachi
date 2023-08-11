@@ -1,0 +1,16 @@
+# https://leetcode.com/problems/sqrtx/description/
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        y=0
+        i=0
+        while i<=x:
+            if i * i == x:
+                y = i
+                break
+            elif i * i > x:
+                y = i - 1
+                break
+            else:
+                i+=1
+        return y
+        
