@@ -1,0 +1,34 @@
+// https://leetcode.com/problems/palindrome-number/description/
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        bool b;
+	string a = to_string(x);
+	int j = a.size() - 1;
+        if (a.size()==1)
+    {
+        b=true;
+    }
+    else
+    {
+	for (int i = 0; i < a.size() - 1; i++)
+	{
+		if (a[i] == a[j])
+		{
+			if (i>=j)
+			{
+				b=true;
+				break;
+			}
+			j--;
+		}
+		else
+		{
+			b=false;
+			break;
+		}
+	}   
+        }   
+         return b;
+       }
+};
