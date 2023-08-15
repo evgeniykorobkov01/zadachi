@@ -1,0 +1,16 @@
+# https://leetcode.com/problems/power-of-two/description/
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        i=2
+        if n==1:
+            return True
+        else:
+            while n:
+                if i==n:
+                    return True
+                    break
+                elif i>n:
+                    return False
+                    break
+                else:
+                    i=i*2
