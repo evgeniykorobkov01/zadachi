@@ -1,0 +1,17 @@
+# https://leetcode.com/problems/missing-number/description/
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        if nums[0]!=0:
+            return 0
+            quit()
+        i=0
+        x=nums[0]
+        while x<len(nums):
+            if nums[i]==x:
+                i+=1
+                x+=1
+            else:
+                return x
+                quit()
+        return len(nums)
